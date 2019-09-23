@@ -23,8 +23,8 @@ First I cleaned up the duplicates, and then sorted the employers who posted the 
 </p>
 
 
-Finally, I analyzed the job description and took the keywords for the programmer's level. Through the previous data, I know that there are 77 positions. Through the keyword chart, I know that the Saskatchewan IT company has a strong demand for advanced programmers, and the demand for entry level programmers is not high.
-I think that most entry programmers work in companies that come through the school's coop or intern projects, so public information sites can hardly see a large number of entry programmers' job advertisements.
+Finally, I analyzed the job description and took the keywords for the programmer's level. Through the previous data, I know that there are 77 positions. Through the keyword chart, I know that the Saskatchewan IT company has a strong demand for senior programmers, and the demand for entry level programmers is not high.
+I think that most entry programmers work in companies that come through the school's coop or intern , so public information sites can hardly see a large number of entry programmers' job advertisements.
 
 <p align="center">
   <img src="https://github.com/kkwangsir/Scraping/blob/master/img/level.png" width="1000" title="hover text">0
