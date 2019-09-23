@@ -2,7 +2,7 @@ from selenium import webdriver
 import pandas as pd
 from bs4 import BeautifulSoup
 from IPython.display import display, HTML
-
+import time
 
 class indeed():
     def __init__(self,keywords,maxPages,location):
@@ -21,7 +21,7 @@ class indeed():
                                   "Description": Description},ignore_index=True)
 
 
-        print("Got these many results:", self.df.shape)
+        print("Got objects", self.df.shape)
         # display(self.df)
 
 
@@ -29,18 +29,17 @@ class indeed():
 
     def toCSV(self):
         name=self.keywords
+        locaton=self.location
 
-        self.df.to_csv(name+".csv", index=False)
+        self.df.to_csv(name+"_"+locaton+".csv", index=False)
 
     def Translate(self):
-        k=self.keywords.replace("/s","+")
+        k=self.keywords
         loc=self.location
-        #         # self.MaxPage=10
         url='https://www.indeed.ca/jobs?q='+k+"&l="+loc+"&start="
         print(url)
         return url
     def getWork(self):
-        # options = webdriver.ChromeOptions()
         driver = webdriver.Chrome()
         max=self.maxPages*10
 
@@ -88,8 +87,9 @@ class indeed():
                 try:
                     sum_div.click()
                 except:
+                    time.sleep(0.1)
+                    print(driver.find_elements_by_class_name('popover-x-button-close'))
                     close_button = driver.find_elements_by_class_name('popover-x-button-close')[0]
-                    driver.implicitly_wait(0.1)
 
                     close_button.click()
                     sum_div.click()
@@ -104,9 +104,9 @@ class indeed():
 
 
 def main():
-    keywords=input("type in searching key words")
-    pages= input("type in max scraping page")
-    location= input("type in location")
+    keywords=input("type in searching key words: ")
+    pages= input("type in max scraping page: ")
+    location= input("type in location: ")
     n =indeed(keywords,int(pages),location)
     n.getWork()
     n.toCSV()
