@@ -19,6 +19,8 @@ print("after clean Sponsored: ",df.shape)
 
 counts = df.groupby("Company").count()["Title"].sort_values(ascending=False)[:10]
 counts.plot("bar",figsize=(20,5))
+plt.savefig("img/companies.png")
+
 plt.show()
 
 
@@ -42,6 +44,7 @@ skills = ["senior","expert","intern","intermediate","entry","fresher"]
 filter_series = result_series.filter(items=skills)
 filter_series.plot('bar',figsize=(10,5))
 
+plt.savefig("img/level.png")
 
 plt.show()
 
