@@ -39,7 +39,7 @@ tags_df = df["Description"].apply(cleanData)
 result = tags_df.apply(Counter).sum().items()
 result = sorted(result, key=lambda kv: kv[1],reverse=True)
 result_series = pd.Series({k: v for k, v in result})
-skills = ["senior","expert","intern","intermediate","entry","fresher"]
+skills = ["senior","expert","junior","intermediate","entry","fresher"]
 
 filter_series = result_series.filter(items=skills)
 filter_series.plot('bar',figsize=(10,5))
