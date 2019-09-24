@@ -1,13 +1,14 @@
 # Scraping
-This project has 2 part, one is scraping indeed.ca by beautifulSoap and selenium, then save csv file, 2nd part is data visulization, infuture it will have GUI by PyQt5
+This project has 2 part, one is scraping indeed.ca by beautifulSoap and selenium, then save csv file, 2nd part is data visulization, in future, it will have GUI by PyQt5
+
 
 The scrape processing
 
-I used the selenium and webdriver to read the real web pages, and iterate innerhtml the of id:result to collect the few tags of data, 
-and when indeed show promotion page I added a script to find close buttom
+
+I used the selenium and webdriver to read the real web pages, and iterate innerhtml the of id:result to collect the few tags of data, and when indeed show promotion page I added a script to find close button
+Click the pic or link below to watch on youtube
 
 
-click the pic or link below to watch on youtube 
 [![Watch the video](https://img.youtube.com/vi/irgcfEXtVkk/maxresdefault.jpg)](https://youtu.be/irgcfEXtVkk)
 
 https://youtu.be/irgcfEXtVkk
