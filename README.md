@@ -7,7 +7,7 @@ I used the selenium and webdriver to read the real web pages, and iterate innerh
 and when indeed show promotion page I added a script to find close buttom
 
 
-click the pic or link below to go to youtube 
+click the pic or link below to watch on youtube 
 [![Watch the video](https://img.youtube.com/vi/irgcfEXtVkk/maxresdefault.jpg)](https://youtu.be/irgcfEXtVkk)
 
 https://youtu.be/irgcfEXtVkk
